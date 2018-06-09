@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+.header{
+    display: flex;
+    background-color: black;    
+    justify-content: space-between;
+    padding-right: 2em; 
+    padding-left: 2em; 
+    margin-bottom: 1em;    
+}
+
+.title{
+    color: white;
+    line-height: 2em;
+    min-width: 227px;
+}
+
+.header nav{
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 13em;
+}
+
+[class^='menu-'] {
+    background-color: white;
+    border-radius: 18%;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    padding: 12px;
+    line-height: 2;
+}
+
+.active{
+    background-color: gray ;
+}
+
+.jumbotron{
+    background-color: rgb(223, 208, 187);
+    width: 90%;
+    margin: auto;
+    padding: 4em;
+    border-radius: 24px;
+    display: flex;
+    position: relative;
+}
+
+.jumbotron-title{
+    border-bottom: 1px solid black;
+    line-height: 4em;
+    margin-bottom: 2em;
+}
+
+.jumbotron article {
+    padding-right: 21em;
+    padding-bottom: 4em;
+}
+
+.aside{
+    padding: 21em 9em;
+    background-color: gray;
+    position: absolute;
+    right: 3em;
+    top: 3em;
+    border-radius: 24px;
+}
+
+.descargar{
+    background-color: gray;
+    position: absolute;
+    border-radius: 24px;
+    bottom: -1.7em;
+    padding: 1em 1em;
+    left: 8em;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.articles{
+    display: flex;
+    width: 55%;
+    margin: 5em;
+    justify-content: space-around;
+    margin-bottom: 3em;
+}
+
+.box{
+    width: 50%;
+}
+
+.articles h2, .list li{
+    line-height: 2em;
+}
+
+.Screenshots{
+    width: 90%;
+    margin: auto;
+}
+
+.Screenshots article{
+    display: flex;
+    align-items: center;
+}
+
+.srcs img{
+    margin: 1em;
+}
+
+.fas{
+    color: gray;
+    font-size: 3em;
+}
+
+footer {
+    display: flex;
+    background-color: gray;
+    color: white;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.7em;
+}
+
+@media only screen and (max-width: 1173px) {
+    body {
+        min-width: 1173px
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .aside {
+        display: none;
+    }
+    .jumbotron article {
+        padding-right: 0;
+        padding-bottom: 0; 
+    }
+    .jumbotron {
+        width: 50%;
+        margin: 0;
+        left: 5em;
+    }
+
+    .header{
+        width: 65%;
+    }
+    .Screenshots{
+        width: 65%;
+        margin: 0;
+    }
+    footer{
+        width: 65%;
+    }
+
+    body {overflow-x:hidden;}
+}
+
+@media only screen and (max-width: 361px) {
+
+    body{
+        width: 360px;
+        overflow-x: auto ;
+        min-width: 0;
+    }
+
+    .title {
+        margin-bottom: 0.5em;
+    }
+    .jumbotron article {
+        padding-right: 0;
+        padding-bottom: 0; 
+    }
+    .jumbotron {
+        width: 100%;
+        left: 0;
+        padding: 2em;
+        margin-bottom: 4em;
+    }
+
+    .jumbotron article {
+        padding-bottom: 3em;
+    }
+
+    .descargar{
+        left: 1.5em;
+    }
+
+    .articles{
+        flex-wrap: wrap;
+        padding: 1em;
+        width: 100%;
+        display: block; 
+        margin:0;       
+    }
+
+    .box{
+        width: 100%
+    }
+
+    .box div{
+        text-align: justify;
+    }
+
+    .list{
+        padding-left: 1em;
+    }    
+
+    .header{
+        width: 100%;
+        flex-wrap: wrap;
+        background: linear-gradient(black 60%, white 10%);
+    }
+
+    [class^='menu-'] {
+        background-color: gray;
+    }
+
+    .Screenshots{
+        width: 100%;
+    }
+
+    .Screenshots img{
+        display: none;
+    }
+    .Screenshots img:nth-child(-n+4){
+        display: block;
+    }
+    footer{
+        width: 100%;
+        font-size: 1em;
+    }
+
+}
